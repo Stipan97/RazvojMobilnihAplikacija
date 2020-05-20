@@ -1,0 +1,180 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".AddPersonFragment">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:padding="20dp">
+
+            <TextView
+                android:id="@+id/tvaName"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/name"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintBottom_toBottomOf="@id/etName"/>
+
+            <EditText
+                android:id="@+id/etName"
+                android:layout_width="250dp"
+                android:layout_height="wrap_content"
+                app:layout_constraintLeft_toRightOf="@id/tvaDDate"
+                app:layout_constraintTop_toTopOf="parent"
+                android:hint="@string/nameHolder"
+                android:inputType="text"/>
+
+            <TextView
+                android:id="@+id/tvaSurname"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/surname"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintBottom_toBottomOf="@id/etSurname"/>
+
+            <EditText
+                android:id="@+id/etSurname"
+                android:layout_width="250dp"
+                android:layout_height="wrap_content"
+                app:layout_constraintLeft_toRightOf="@id/tvaDDate"
+                app:layout_constraintTop_toBottomOf="@+id/etName"
+                android:hint="@string/surnameHolder"
+                android:inputType="text"/>
+
+            <TextView
+                android:id="@+id/tvaBDate"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/date_of_birth"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintBottom_toBottomOf="@id/etBDate"/>
+
+            <EditText
+                android:id="@+id/etBDate"
+                android:layout_width="250dp"
+                android:layout_height="wrap_content"
+                app:layout_constraintLeft_toRightOf="@id/tvaDDate"
+                app:layout_constraintTop_toBottomOf="@+id/etSurname"
+                android:hint="@string/_19_05_2020"
+                android:inputType="date"/>
+
+            <TextView
+                android:id="@+id/tvaCheckAlive"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/status"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintBottom_toBottomOf="@id/lLay"/>
+
+            <RadioGroup
+                android:id="@+id/lLay"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                app:layout_constraintLeft_toRightOf="@id/tvaDDate"
+                app:layout_constraintTop_toBottomOf="@+id/etBDate">
+
+                <RadioButton
+                    android:id="@+id/rbAlive"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/alive"/>
+
+                <RadioButton
+                    android:id="@+id/rbDead"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/dead"/>
+
+            </RadioGroup>
+
+            <TextView
+                android:id="@+id/tvaDDate"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/date_of_death"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintBottom_toBottomOf="@id/etDDate"/>
+
+            <EditText
+                android:id="@+id/etDDate"
+                android:layout_width="250dp"
+                android:layout_height="wrap_content"
+                app:layout_constraintLeft_toRightOf="@id/tvaDDate"
+                app:layout_constraintTop_toBottomOf="@+id/lLay"
+                android:hint="@string/_21_05_2020"
+                android:inputType="date"/>
+
+            <TextView
+                android:id="@+id/tvaDesc"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/description"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintBottom_toBottomOf="@id/etDesc"/>
+
+            <EditText
+                android:id="@+id/etDesc"
+                android:layout_width="250dp"
+                android:layout_height="wrap_content"
+                app:layout_constraintLeft_toRightOf="@id/tvaDDate"
+                app:layout_constraintTop_toBottomOf="@+id/etDDate"
+                android:hint="@string/short_description"
+                android:maxLength="88"
+                android:inputType="text"/>
+
+            <TextView
+                android:id="@+id/tvaQuotes"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/quotes"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintTop_toTopOf="@id/etQuotes"/>
+
+            <EditText
+                android:id="@+id/etQuotes"
+                android:layout_width="250dp"
+                android:layout_height="wrap_content"
+                app:layout_constraintLeft_toRightOf="@id/tvaDDate"
+                app:layout_constraintTop_toBottomOf="@+id/etDesc"
+                android:hint="@string/quotesExample"
+                android:inputType="textMultiLine" />
+
+            <ImageView
+                android:id="@+id/ivPreview"
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/etQuotes"/>
+
+            <Button
+                android:id="@+id/btnChoose"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/etQuotes"
+                app:layout_constraintRight_toRightOf="parent"
+                android:text="@string/choose_image" />
+
+            <Button
+                android:id="@+id/btnSubmit"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintTop_toBottomOf="@id/btnChoose"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                android:text="@string/submit" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </ScrollView>
+
+</FrameLayout>
