@@ -3,6 +3,8 @@ package com.example.lv2_1_inspiringperson
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.FragmentManager
 import androidx.fragment.app.FragmentTransaction
+import com.example.lv2_1_inspiringperson.Fragments.AddPersonFragment
+import com.example.lv2_1_inspiringperson.Fragments.ViewPeopleFragment
 import com.google.android.material.bottomnavigation.BottomNavigationView
 
 class BottomNavBar(bottomNavView: BottomNavigationView, private val supportFragmentManager: FragmentManager) {
@@ -14,12 +16,14 @@ class BottomNavBar(bottomNavView: BottomNavigationView, private val supportFragm
         bottomNavBar.setOnNavigationItemSelectedListener { item ->
             when(item.itemId) {
                 R.id.add_person -> {
-                    addPersonFragment = AddPersonFragment()
+                    addPersonFragment =
+                        AddPersonFragment()
                     defaultFragmentBehaviour(R.id.frame, addPersonFragment)
                 }
 
                 R.id.view_people -> {
-                    viewPeopleFragment = ViewPeopleFragment()
+                    viewPeopleFragment =
+                        ViewPeopleFragment()
                     defaultFragmentBehaviour(R.id.frame, viewPeopleFragment)
                 }
             }
@@ -37,6 +41,8 @@ class BottomNavBar(bottomNavView: BottomNavigationView, private val supportFragm
     }
 
     fun showDefaultFragment() {
-        defaultFragmentBehaviour(R.id.frame, AddPersonFragment())
+        defaultFragmentBehaviour(R.id.frame,
+            AddPersonFragment()
+        )
     }
 }
