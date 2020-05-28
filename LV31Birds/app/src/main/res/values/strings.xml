@@ -1,0 +1,12 @@
+<resources>
+    <string name="app_name">LV3-1-Birds</string>
+    <string name="hawk">Hawk:</string>
+    <string name="eagle">Eagle:</string>
+    <string name="vulture">Vulture:</string>
+    <string name="sparrow">Sparrow:</string>
+    <string name="hawkbtn">Hawk</string>
+    <string name="eaglebtn">Eagle</string>
+    <string name="vulturebtn">Vulture</string>
+    <string name="sparrowbtn">Sparrow</string>
+    <string name="reset">Reset</string>
+</resources>

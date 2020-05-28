@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#6200EE</color>
+    <color name="colorPrimaryDark">#3700B3</color>
+    <color name="colorAccent">#03DAC5</color>
+    <color name="white">#fff</color>
+    <color name="hawk">#32a852</color>
+    <color name="eagle">#4688c2</color>
+    <color name="vulture">#9246c2</color>
+    <color name="sparrow">#b4c246</color>
+</resources>
