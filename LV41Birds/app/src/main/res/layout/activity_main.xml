@@ -1,0 +1,142 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+    <data>
+        <import type="androidx.core.content.ContextCompat"/>
+        <variable
+            name="counters"
+            type="com.example.lv41birds.ViewModelCounter" />
+    </data>
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".MainActivity">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/layBirds"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent"
+            android:background="@{ContextCompat.getColor(context, counters.bgColor)}"
+            android:padding="10dp">
+
+            <TextView
+                android:id="@+id/tvHawk"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintLeft_toLeftOf="parent"
+                android:text="@string/hawk"/>
+
+            <TextView
+                android:id="@+id/tvFirstBird"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintLeft_toRightOf="@+id/tvHawk"
+                android:text="@{Integer.toString(counters.counterFirstBird)}"/>
+
+            <TextView
+                android:id="@+id/tvEagle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintTop_toBottomOf="@+id/tvHawk"
+                app:layout_constraintLeft_toLeftOf="parent"
+                android:text="@string/eagle"/>
+
+            <TextView
+                android:id="@+id/tvSecondBird"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintTop_toBottomOf="@id/tvFirstBird"
+                app:layout_constraintLeft_toRightOf="@+id/tvEagle"
+                android:text="@{Integer.toString(counters.counterSecondBird)}"/>
+
+            <TextView
+                android:id="@+id/tvVulture"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintTop_toBottomOf="@+id/tvEagle"
+                app:layout_constraintLeft_toLeftOf="parent"
+                android:text="@string/vulture"/>
+
+            <TextView
+                android:id="@+id/tvThirdBird"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintTop_toBottomOf="@id/tvSecondBird"
+                app:layout_constraintLeft_toRightOf="@+id/tvVulture"
+                android:text="@{Integer.toString(counters.counterThirdBird)}"/>
+
+            <TextView
+                android:id="@+id/tvSparrow"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintTop_toBottomOf="@+id/tvVulture"
+                app:layout_constraintLeft_toLeftOf="parent"
+                android:text="@string/sparrow"/>
+
+            <TextView
+                android:id="@+id/tvFourthBird"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintTop_toBottomOf="@id/tvThirdBird"
+                app:layout_constraintLeft_toRightOf="@+id/tvSparrow"
+                android:text="@{Integer.toString(counters.counterFourthBird)}"/>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <Button
+            android:id="@+id/btnHawk"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/hawkbtn"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/layBirds"
+            android:background="@color/hawk"
+            android:layout_margin="10dp"/>
+
+        <Button
+            android:id="@+id/btnEagle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/eaglebtn"
+            app:layout_constraintLeft_toRightOf="@id/btnHawk"
+            app:layout_constraintTop_toBottomOf="@+id/layBirds"
+            android:background="@color/eagle"
+            android:layout_margin="10dp"/>
+
+        <Button
+            android:id="@+id/btnVulture"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/vulturebtn"
+            app:layout_constraintLeft_toRightOf="@id/btnEagle"
+            app:layout_constraintTop_toBottomOf="@+id/layBirds"
+            android:background="@color/vulture"
+            android:layout_margin="10dp"/>
+
+        <Button
+            android:id="@+id/btnSparrow"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/sparrowbtn"
+            app:layout_constraintLeft_toRightOf="@id/btnVulture"
+            app:layout_constraintTop_toBottomOf="@+id/layBirds"
+            android:background="@color/sparrow"
+            android:layout_margin="10dp"/>
+
+        <Button
+            android:id="@+id/btnReset"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/reset"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/btnHawk"
+            android:layout_margin="10dp"/>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>
